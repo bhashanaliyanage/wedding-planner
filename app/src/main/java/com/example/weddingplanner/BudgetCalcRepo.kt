@@ -7,7 +7,7 @@ class BudgetCalcRepo(private val budgetDao: BudgetDao) {
     /*Read Function*/
     val allItems: LiveData<List<BudgetBack>> = budgetDao.getAllEntities()
 
-    suspend fun insert(budgetBack: BudgetBack) {
+    /*suspend fun insert(budgetBack: BudgetBack) {
         BudgetDao.insert(budgetBack)
     }
 
@@ -17,5 +17,5 @@ class BudgetCalcRepo(private val budgetDao: BudgetDao) {
 
     suspend fun update(budgetBack: BudgetBack) {
         BudgetDao.update(budgetBack)
-    }
+    }*/
 }
