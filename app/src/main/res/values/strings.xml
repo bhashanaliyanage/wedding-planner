@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Wedding Planner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="subtitle">We\'re Trying the Knot</string>
+    <string name="title"><![CDATA[Natasha & Ramesh]]></string>
+    <string name="months">08</string>
+    <string name="months_txt">MONTHS</string>
+    <string name="days">05</string>
+    <string name="days_txt">DAYS</string>
+    <string name="weeks_txt">WEEKS</string>
+    <string name="weeks">02</string>
+    <string name="add_new_item_button_text">Add New Item</string>
+</resources>

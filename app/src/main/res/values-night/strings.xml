@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle">We\'re Trying the Knot</string>
+    <string name="title"><![CDATA[Natasha & Romesh]]></string>
+    <string name="months">08</string>
+    <string name="weeks">02</string>
+    <string name="add_new_item_button_text">Add New Item</string>
+</resources>
