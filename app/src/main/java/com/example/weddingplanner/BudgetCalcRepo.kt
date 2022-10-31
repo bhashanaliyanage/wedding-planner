@@ -16,7 +16,7 @@ class BudgetCalcRepo(private val budgetDao: BudgetDao) {
     }
 
     suspend fun update(budgetBack: BudgetBack) {
-        BudgetDao.update(budgetBack)
+        BudgetDao.update(budgetBack)t
 
     }*/
 }
