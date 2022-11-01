@@ -5,4 +5,8 @@
     <string name="months">08</string>
     <string name="weeks">02</string>
     <string name="add_new_item_button_text">Add New Item</string>
+    <string name="add_new_item_button_text_02">Add Item to Calculator</string>
+    <string name="budget_calc_tot_title">Budget</string>
+    <string name="budget_calc_tot">LKR 0</string>
+    <string name="budget_calc_dummy_item">Dummy Item</string>
 </resources>
