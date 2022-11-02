@@ -16,4 +16,8 @@
     <string name="budget_calc_tot_title">Budget</string>
     <string name="budget_calc_tot">LKR 0</string>
     <string name="budget_calc_dummy_item">Dummy Item</string>
+    <string name="btnPhotoVideoText"><![CDATA[Photography &]]></string>
+    <string name="btnPhotoVideoText2">Videography</string>
+    <string name="budget_overview_title">Budget Overview</string>
+    <string name="comming_soon">Will be available soon…</string>
 </resources>

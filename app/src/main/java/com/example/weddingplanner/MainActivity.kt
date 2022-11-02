@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.weddingplanner.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // replaceFragment(Home())
+        replaceFragment(Home())
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.accent)
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
