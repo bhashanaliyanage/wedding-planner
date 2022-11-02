@@ -16,8 +16,6 @@ class Home : Fragment() {
 
     }
 
-
-
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -44,6 +42,10 @@ class Home : Fragment() {
 
         cardViewBudget.setOnClickListener {
             replaceFragment(BudgetCalc())
+        }
+
+        crdPhotoVideo.setOnClickListener {
+            replaceFragment(PhotographyAndVideography())
         }
     }
 }

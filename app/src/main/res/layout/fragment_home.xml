@@ -263,6 +263,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/crdPhotoVideo"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
                     android:layout_marginStart="15dp"
