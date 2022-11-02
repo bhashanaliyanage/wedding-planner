@@ -20,4 +20,6 @@
     <string name="btnPhotoVideoText2">Videography</string>
     <string name="budget_overview_title">Budget Overview</string>
     <string name="comming_soon">Will be available soon…</string>
+    <string name="title_hotels">Hotels</string>
+    <string name="btnHotelSliderText">Indoor</string>
 </resources>

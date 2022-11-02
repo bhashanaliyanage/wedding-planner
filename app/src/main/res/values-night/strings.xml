@@ -11,4 +11,6 @@
     <string name="budget_calc_dummy_item">Dummy Item</string>
     <string name="btnPhotoVideoText"><![CDATA[Photography & Videography]]></string>
     <string name="comming_soon">Comming Soon</string>
+    <string name="title_hotels">Hotels</string>
+    <string name="btnHotelSliderText">Indoor</string>
 </resources>
