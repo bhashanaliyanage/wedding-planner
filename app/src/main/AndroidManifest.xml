@@ -13,13 +13,6 @@
         android:theme="@style/Theme.WeddingPlanner"
         tools:targetApi="31">
         <activity
-            android:name=".Hotels"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".BudgetCalcAdd"
             android:exported="false">
             <meta-data

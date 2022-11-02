@@ -1,6 +1,5 @@
 package com.example.weddingplanner
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,20 +34,12 @@ class Home : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() =
-            Home().apply {
-                arguments = Bundle().apply {
-                }
-            }
-    }
+    companion object;
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         hotelsCard.setOnClickListener {
-            val intent = Intent (activity, Hotels::class.java)
-            requireActivity().startActivity(intent)
+            replaceFragment(HotelsFragment())
         }
 
         cardViewBudget.setOnClickListener {
