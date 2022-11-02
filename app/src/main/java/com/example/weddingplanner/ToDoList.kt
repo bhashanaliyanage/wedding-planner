@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [TodoList.newInstance] factory method to
+ * Use the [ToDoList.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TodoList : Fragment() {
+class ToDoList : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class TodoList : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_todo_list, container, false)
+        return inflater.inflate(R.layout.fragment_to_do_list, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class TodoList : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment TodoList.
+         * @return A new instance of fragment ToDoList.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            TodoList().apply {
+            ToDoList().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -14,7 +14,7 @@
     <string name="add_new_item_button_text_02">Add Item to Calculator</string>
     <string name="add_new_item_button_back">Back</string>
     <string name="budget_calc_tot_title">Budget</string>
-    <string name="budget_calc_tot">LKR 0</string>
+    <string name="budget_calc_tot">LKR 0.00</string>
     <string name="budget_calc_dummy_item">Dummy Item</string>
     <string name="btnPhotoVideoText"><![CDATA[Photography &]]></string>
     <string name="btnPhotoVideoText2">Videography</string>
@@ -30,4 +30,12 @@
     <string name="btnPhotoVideoSliderText">Photography</string>
     <string name="studio_name">Studio Name</string>
     <string name="contact">Contact Now</string>
+    <string name="guestCardTitle">Guests Attending</string>
+    <string name="guestCardAmount">0/0</string>
+    <string name="todo_list_card_title">ToDo List</string>
+    <string name="todolist_card_amount">0/0</string>
+    <string name="hotel_card_title">Luxrange Hotel</string>
+    <string name="hotel_card_sub">Change Venue</string>
+    <string name="support_card_title">Support</string>
+    <string name="view">View</string>
 </resources>
