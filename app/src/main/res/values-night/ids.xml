@@ -8,4 +8,5 @@
     <item name="linearLayout" type="id" />
     <item name="weeks" type="id" />
     <item name="weeks_txt" type="id" />
+    <item name="nestedScrollView" type="id" />
 </resources>

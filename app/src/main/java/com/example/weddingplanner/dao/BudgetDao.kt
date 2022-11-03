@@ -17,4 +17,7 @@ interface BudgetDao {
 
     @Delete
     suspend fun deleteItem(items: Items)
+
+    @Query("SELECT SUM(price) FROM ItemsTable")
+    suspend fun getSum() : Int
 }

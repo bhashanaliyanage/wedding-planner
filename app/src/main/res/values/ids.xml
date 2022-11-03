@@ -9,4 +9,5 @@
     <item name="weeks" type="id" />
     <item name="weeks_txt" type="id" />
     <item name="btnAddItem" type="id"/>
+    <item name="nestedScrollView" type="id" />
 </resources>

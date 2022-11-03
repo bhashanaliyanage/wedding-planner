@@ -11,7 +11,7 @@ import com.example.weddingplanner.entities.Items
 import kotlinx.android.synthetic.main.fragment_budget_calc_add.*
 import kotlinx.coroutines.launch
 
-class BudgetCalcAddFragment : BaseFragment() {
+class BudgetCalcAddFragment : BaseFragment(){
     // TODO: Rename and change types of parameters
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,23 +48,22 @@ class BudgetCalcAddFragment : BaseFragment() {
     }
 
     private fun addItem() {
-        if (txt_item_title.text.isNullOrEmpty()) {
-            Toast.makeText(context, "Item Name Required!", Toast.LENGTH_SHORT).show()
-        }
-
-        if (txt_item_price.text.isNullOrEmpty()) {
-            Toast.makeText(context, "Item Price Required!", Toast.LENGTH_SHORT).show()
-        }
-        launch {
-            var items = Items()
-            items.title = txt_item_title.text.toString()
-            items.price = txt_item_price.text.toString()
-            context?.let {
-                ItemsDatabase.getDatabase(it).budgetDao().insertItem(items)
-                txt_item_title.setText("")
-                txt_item_price.setText("")
+        if (txt_item_title.text.isNullOrEmpty() && txt_item_price.text.isNullOrEmpty()) {
+            Toast.makeText(context, "Item Name or Price Required!", Toast.LENGTH_SHORT).show()
+        } else {
+            launch {
+                var items = Items()
+                items.title = txt_item_title.text.toString()
+                items.price = txt_item_price.text.toString()
+                context?.let {
+                    ItemsDatabase.getDatabase(it).budgetDao().insertItem(items)
+                    txt_item_title.setText("")
+                    txt_item_price.setText("")
+                    replaceFragment(BudgetCalc())
+                }
             }
         }
     }
+
 
 }
