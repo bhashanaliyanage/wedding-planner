@@ -52,6 +52,14 @@ class Home : BaseFragment() {
             replaceFragment(PhotographyAndVideography())
         }
 
+        crdTodoHome.setOnClickListener {
+            replaceFragment(ToDoList())
+        }
+
+        crdNotesHome.setOnClickListener {
+            replaceFragment(NotesHome())
+        }
+
         launch {
             context?.let {
                 var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
