@@ -2,6 +2,7 @@ package com.example.weddingplanner
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.weddingplanner.databinding.ActivityMainBinding
 
@@ -15,21 +16,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(Home())
 
+        window.statusBarColor = ContextCompat.getColor(this, R.color.accent)
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> replaceFragment(Home())
-                R.id.todolist -> replaceFragment(TodoList())
+                R.id.todolist -> replaceFragment(Dashboard())
                 R.id.services -> replaceFragment(ServicesPage())
                 R.id.budget_calc -> replaceFragment(BudgetCalc())
-
                 else -> {
-
                 }
             }
             true
         }
     }
+
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
