@@ -9,10 +9,17 @@ import com.example.weddingplanner.entities.Items
 
 @Database(entities = [Items::class], version = 1, exportSchema = false)
 abstract class ItemsDatabase : RoomDatabase() {
+    abstract fun budgetDao():BudgetDao
     companion object {
-        var itemsDatabase: ItemsDatabase? = null
 
-        @Synchronized
+        fun getDatabase(context: Context): ItemsDatabase {
+            val db  = Room.databaseBuilder(
+                context, ItemsDatabase::class.java, "items.db"
+            ).build()
+            return db
+        }
+
+        /*@Synchronized
         fun getDatabase(context: Context): ItemsDatabase {
             if (itemsDatabase != null) {
                 itemsDatabase = Room.databaseBuilder(
@@ -20,7 +27,6 @@ abstract class ItemsDatabase : RoomDatabase() {
                 ).build()
             }
             return itemsDatabase!!
-        }
+        }*/
     }
-    abstract fun budgetDao():BudgetDao
 }

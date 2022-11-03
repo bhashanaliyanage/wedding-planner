@@ -15,6 +15,7 @@
 
     <!--Accent colors-->
     <color name="accent_white">#D9D9D9</color>
+    <color name="accent_200">#ffeecb</color>
     <color name="accent_light">#FFC850</color>
     <color name="accent">#B08C3E</color>
 

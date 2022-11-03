@@ -24,4 +24,17 @@
     <string name="hotel_card_sub">Change Venue</string>
     <string name="support_card_title">Support</string>
     <string name="view">View</string>
+    <string name="todolist_card_title_02">Tasks Completed</string>
+    <string name="add_new_task_button_text">Add New Task</string>
+    <string name="servicesicon">servicesIcon</string>
+    <string name="dressing">Dressing</string>
+    <string name="outfits">Outfits</string>
+    <string name="marriage_registrar">Marriage Registrar</string>
+    <string name="ashtaka_amp_poru"><![CDATA[Ashtaka & Poru]]></string>
+    <string name="wedding_cars">Wedding Cars</string>
+    <string name="projectors_amp_led_walls"><![CDATA[Projectors & LED Walls]]></string>
+    <string name="cakes">Cakes</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="decoration">Decoration</string>
+    <string name="rings_and_jewelleries">Rings and Jewelleries</string>
 </resources>

@@ -39,5 +39,9 @@ class Dashboard : Fragment() {
         cardViewVenue.setOnClickListener {
             replaceFragment(HotelsFragment())
         }
+
+        todoCard.setOnClickListener {
+            replaceFragment(ToDoList())
+        }
     }
 }

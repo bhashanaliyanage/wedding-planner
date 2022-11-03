@@ -9,8 +9,8 @@ import com.example.weddingplanner.entities.Items
 
 @Dao
 interface BudgetDao {
-    @get:Query("SELECT * FROM ItemsTable ORDER BY id DESC")
-    val allBudget: List<Items>
+    @Query("SELECT * FROM ItemsTable ORDER BY id DESC")
+    suspend fun getAllItems() : List<Items>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertItem(items: Items)
