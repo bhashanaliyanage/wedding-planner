@@ -7,13 +7,18 @@ import androidx.room.RoomDatabase
 import com.example.weddingplanner.dao.BudgetDao
 import com.example.weddingplanner.entities.Items
 
-@Database(entities = [Items::class], version = 1, exportSchema = false)
+@Database(
+    entities = [Items::class],
+    version = 1,
+    exportSchema = false
+)
 abstract class ItemsDatabase : RoomDatabase() {
-    abstract fun budgetDao():BudgetDao
+    abstract fun budgetDao(): BudgetDao
+
     companion object {
 
         fun getDatabase(context: Context): ItemsDatabase {
-            val db  = Room.databaseBuilder(
+            val db = Room.databaseBuilder(
                 context, ItemsDatabase::class.java, "items.db"
             ).build()
             return db

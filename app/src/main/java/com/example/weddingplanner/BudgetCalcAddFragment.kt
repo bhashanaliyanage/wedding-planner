@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.weddingplanner.database.ItemsDatabase
 import com.example.weddingplanner.entities.Items
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_budget_calc_add.*
 import kotlinx.coroutines.launch
 
@@ -22,6 +23,7 @@ class BudgetCalcAddFragment : BaseFragment(){
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
     }
@@ -44,6 +46,7 @@ class BudgetCalcAddFragment : BaseFragment(){
 
         btn_add_item_submit.setOnClickListener {
             addItem()
+            Snackbar.make(it,"Item Added", Snackbar.LENGTH_LONG).show()
         }
     }
 

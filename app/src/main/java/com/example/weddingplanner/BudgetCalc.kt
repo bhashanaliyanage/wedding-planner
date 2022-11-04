@@ -24,6 +24,7 @@ class BudgetCalc : BaseFragment() {
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
         fragmentTransaction.replace(R.id.frame_layout, fragment).addToBackStack("Test")
         fragmentTransaction.commit()
     }
@@ -42,7 +43,6 @@ class BudgetCalc : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         budget_calc_recycler.setHasFixedSize(true)
-        // Check the below one later
         budget_calc_recycler.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
 
         launch {

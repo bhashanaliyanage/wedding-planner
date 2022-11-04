@@ -37,4 +37,9 @@
     <string name="entertainment">Entertainment</string>
     <string name="decoration">Decoration</string>
     <string name="rings_and_jewelleries">Rings and Jewelleries</string>
+    <string name="fab">FAB</string>
+    <string name="tvNotesAddCardViewTitle">Enter Note</string>
+    <string name="etNoteTitle">Note Title</string>
+    <string name="etNote">Note</string>
+    <string name="btnAddNote">Add Note</string>
 </resources>
