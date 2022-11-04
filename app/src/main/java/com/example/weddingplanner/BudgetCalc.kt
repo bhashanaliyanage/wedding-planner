@@ -47,17 +47,21 @@ class BudgetCalc : BaseFragment() {
 
         launch {
             context?.let {
-                var items = ItemsDatabase.getDatabase(it).budgetDao().getAllItems()
+                try {
+                    var items = ItemsDatabase.getDatabase(it).budgetDao().getAllItems()
 
-                var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
-                Log.e("Amount", amount.toString())
-                val format = NumberFormat.getCurrencyInstance()
-                format.maximumFractionDigits = 0
-                format.currency = Currency.getInstance("LKR")
-                var sendAmount = format.format(amount)
-                tvAmount.text = sendAmount
+                    var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
+                    Log.e("Amount", amount.toString())
+                    val format = NumberFormat.getCurrencyInstance()
+                    format.maximumFractionDigits = 0
+                    format.currency = Currency.getInstance("LKR")
+                    var sendAmount = format.format(amount)
+                    tvAmount.text = sendAmount
 
-                budget_calc_recycler.adapter = ItemsAdapter(items)
+                    budget_calc_recycler.adapter = ItemsAdapter(items)
+                } catch (e: Exception) {
+
+                }
             }
         }
 

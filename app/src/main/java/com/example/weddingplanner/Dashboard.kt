@@ -51,13 +51,17 @@ class Dashboard : BaseFragment() {
 
         launch {
             context?.let {
-                var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
-                val format = NumberFormat.getCurrencyInstance()
-                format.maximumFractionDigits = 0
-                format.currency = Currency.getInstance("LKR")
-                var sendAmount = format.format(amount)
+                try {
+                    val amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
+                    val format = NumberFormat.getCurrencyInstance()
+                    format.maximumFractionDigits = 0
+                    format.currency = Currency.getInstance("LKR")
+                    val sendAmount = format.format(amount)
 
-                tvDashboardAmount.text = sendAmount
+                    tvDashboardAmount.text = sendAmount
+                } catch (e: Exception) {
+
+                }
             }
         }
     }

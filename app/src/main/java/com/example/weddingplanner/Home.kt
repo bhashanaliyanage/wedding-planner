@@ -63,13 +63,16 @@ class Home : BaseFragment() {
 
         launch {
             context?.let {
-                var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
-                val format = NumberFormat.getCurrencyInstance()
-                format.maximumFractionDigits = 0
-                format.currency = Currency.getInstance("LKR")
-                var sendAmount = format.format(amount)
+                try {
+                    var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
+                    val format = NumberFormat.getCurrencyInstance()
+                    format.maximumFractionDigits = 0
+                    format.currency = Currency.getInstance("LKR")
+                    var sendAmount = format.format(amount)
+                    tvHomeAmount.text = sendAmount
+                } catch (e: Exception) {
 
-                tvHomeAmount.text = sendAmount
+                }
             }
         }
     }

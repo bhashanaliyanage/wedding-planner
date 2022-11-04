@@ -3,6 +3,7 @@ package com.example.weddingplanner.dao
 import androidx.room.*
 import com.example.weddingplanner.entities.ToDos
 
+/*Data Access Object*/
 @Dao
 interface ToDosDao {
     // Budget Calculator
