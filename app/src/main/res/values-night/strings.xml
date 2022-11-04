@@ -42,4 +42,7 @@
     <string name="etNoteTitle">Note Title</string>
     <string name="etNote">Note</string>
     <string name="btnAddNote">Add Note</string>
+    <string name="tvTodoAddCardViewTitle">Enter ToDo Details</string>
+    <string name="etTodoTitle">Enter Title</string>
+    <string name="btnAddTodo">Add ToDo</string>
 </resources>
