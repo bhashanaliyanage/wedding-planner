@@ -90,7 +90,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_01"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -161,7 +161,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_02"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -232,7 +232,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_03"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -303,7 +303,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_04"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -374,7 +374,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_05"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -446,7 +446,7 @@
                             android:layout_height="90dp"
                             android:layout_marginStart="5dp"
                             android:contentDescription="@string/hotel_image"
-                            android:foreground="@drawable/hotel_01"
+                            android:foreground="@drawable/photo_01"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
