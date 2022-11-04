@@ -38,18 +38,21 @@ class ToDoList : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btnAddTodo.setOnClickListener {
-            replaceFragment(TodoAdd())
-        }
 
+        /*RecyclerView Design*/
         todoRecycler.setHasFixedSize(true)
         todoRecycler.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
 
+        /*Database Integration*/
         launch {
             context?.let {
                 var todos = ToDosDatabase.getDatabase(it).todoDao().getAllToDos()
                 todoRecycler.adapter = ToDosAdapter(todos)
             }
+        }
+
+        btnAddTodo.setOnClickListener {
+            replaceFragment(TodoAdd())
         }
     }
 }
