@@ -35,7 +35,10 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+
+        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+
+        fragmentTransaction.replace(R.id.frame_layout, fragment).addToBackStack(fragment.javaClass.simpleName)
         fragmentTransaction.commit()
     }
 }

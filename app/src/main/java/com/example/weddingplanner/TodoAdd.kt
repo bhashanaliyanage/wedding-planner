@@ -4,14 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.weddingplanner.database.ItemsDatabase
-import kotlinx.android.synthetic.main.fragment_dashboard.*
+import com.example.weddingplanner.database.ToDosDatabase
+import com.example.weddingplanner.entities.ToDos
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_todo_add.*
 import kotlinx.coroutines.launch
-import java.text.NumberFormat
-import java.util.*
 
-class Dashboard : BaseFragment() {
+class TodoAdd : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -30,34 +31,27 @@ class Dashboard : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        return inflater.inflate(R.layout.fragment_todo_add, container, false)
     }
 
     companion object;
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        cardViewBudget.setOnClickListener {
-            replaceFragment(BudgetCalc())
-        }
-
-        cardViewVenue.setOnClickListener {
-            replaceFragment(HotelsFragment())
-        }
-
-        todoCard.setOnClickListener {
-            replaceFragment(ToDoList())
-        }
-
-        launch {
-            context?.let {
-                var amount = ItemsDatabase.getDatabase(it).budgetDao().getSum()
-                val format = NumberFormat.getCurrencyInstance()
-                format.maximumFractionDigits = 0
-                format.currency = Currency.getInstance("LKR")
-                var sendAmount = format.format(amount)
-
-                tvDashboardAmount.text = sendAmount
+        btnAddTodoFrag.setOnClickListener {
+            if (etTodoTitle.text.isNullOrEmpty()) {
+                Toast.makeText(context, "ToDo Title is Required!", Toast.LENGTH_SHORT).show()
+            } else {
+                launch {
+                    val todos = ToDos()
+                    todos.title = etTodoTitle.text.toString()
+                    context?.let {
+                        ToDosDatabase.getDatabase(it).todoDao().insertToDo(todos)
+                        etTodoTitle.setText("")
+                        replaceFragment(ToDoList())
+                    }
+                    Snackbar.make(it,"ToDo Added", Snackbar.LENGTH_LONG).show()
+                }
             }
         }
     }

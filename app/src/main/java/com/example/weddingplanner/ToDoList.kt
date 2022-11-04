@@ -5,14 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.weddingplanner.adapter.ToDosAdapter
+import com.example.weddingplanner.database.ToDosDatabase
 import kotlinx.android.synthetic.main.fragment_to_do_list.*
+import kotlinx.coroutines.launch
 
-class ToDoList : Fragment() {
+class ToDoList : BaseFragment() {
     // TODO: Rename and change types of parameters
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 
     override fun onCreateView(
@@ -26,36 +38,18 @@ class ToDoList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var count = 0
-        todoItem01.setOnClickListener {
-            todoItem01Box.performClick()
-            if (todoItem01Box.isChecked) {
-                count += 1
-            } else {
-                count -= 1
-            }
-            taskAmount.text = count.toString() + "/3"
+        btnAddTodo.setOnClickListener {
+            replaceFragment(TodoAdd())
         }
 
-        todoItem02.setOnClickListener {
-            todoItem02Box.performClick()
-            if (todoItem02Box.isChecked) {
-                count += 1
-            } else {
-                count -= 1
-            }
-            taskAmount.text = count.toString() + "/3"
-        }
+        todoRecycler.setHasFixedSize(true)
+        todoRecycler.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
 
-        todoItem03.setOnClickListener {
-            todoItem03Box.performClick()
-            if (todoItem03Box.isChecked) {
-                count += 1
-            } else {
-                count -= 1
+        launch {
+            context?.let {
+                var todos = ToDosDatabase.getDatabase(it).todoDao().getAllToDos()
+                todoRecycler.adapter = ToDosAdapter(todos)
             }
-            taskAmount.text = count.toString() + "/3"
         }
-
     }
 }

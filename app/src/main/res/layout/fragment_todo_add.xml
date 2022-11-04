@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BudgetCalcAddFragment">
+    tools:context=".TodoAdd">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="10dp">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -41,17 +42,17 @@
                         android:layout_marginTop="50dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/urbanist_bold"
-                        android:text="Enter Item Details"
+                        android:text="@string/tvTodoAddCardViewTitle"
                         android:textColor="@color/black_accent"
                         android:textSize="22sp" />
 
                     <EditText
-                        android:id="@+id/txt_item_title"
+                        android:id="@+id/etTodoTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/urbanist_semi_bold"
-                        android:hint="Item Name"
+                        android:hint="@string/etTodoTitle"
                         android:textColor="@color/black_accent"
                         android:textColorHighlight="@color/accent"
                         android:textColorHint="@color/pink_light"
@@ -59,25 +60,14 @@
                         android:textSize="14sp"
                         android:singleLine="true"/>
 
-                    <EditText
-                        android:id="@+id/txt_item_price"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/urbanist_semi_bold"
-                        android:hint="Price LKR"
-                        android:inputType="number"
-                        android:textColor="@color/black_accent"
-                        android:textColorHint="@color/pink_light"
-                        android:textSize="14sp" />
-
                     <Button
-                        android:id="@+id/btn_add_item_submit"
+                        android:id="@+id/btnAddTodoFrag"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="15dp"
                         android:backgroundTint="@color/accent"
                         android:fontFamily="@font/urbanist_regular"
-                        android:text="@string/add_new_item_button_text_02"
+                        android:text="@string/btnAddTodo"
                         android:textAlignment="viewStart"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -88,7 +78,7 @@
                         app:iconTint="@color/white" />
 
                     <Button
-                        android:id="@+id/btn_add_item_back"
+                        android:id="@+id/btnAddTodoBack"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginBottom="15dp"
@@ -103,9 +93,9 @@
                         app:iconGravity="end"
                         app:iconSize="40dp"
                         app:iconTint="@color/white" />
-
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
