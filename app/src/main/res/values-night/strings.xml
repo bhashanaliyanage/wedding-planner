@@ -45,4 +45,5 @@
     <string name="tvTodoAddCardViewTitle">Enter ToDo Details</string>
     <string name="etTodoTitle">Enter Title</string>
     <string name="btnAddTodo">Add ToDo</string>
+    <string name="title_dressing">Dressing</string>
 </resources>
